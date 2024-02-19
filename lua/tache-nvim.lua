@@ -23,9 +23,9 @@ local function main()
     vim.api.nvim_create_user_command("List", function () list() end, {})
     local task_list = list()
     table.insert(task_list, 1, "Tache")
-    local tache_buf = vim.api.nvim_create_buf(true, true)
-    vim.api.nvim_set_current_buf(tache_buf)
-    vim.api.nvim_buf_set_lines(tache_buf, 0, -1, false, task_list)
+    --local tache_buf = vim.api.nvim_create_buf(true, true)
+    --vim.api.nvim_set_current_buf(tache_buf)
+    --vim.api.nvim_buf_set_lines(tache_buf, 0, -1, false, task_list)
 end
 
 local function setup()
