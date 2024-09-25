@@ -4,7 +4,7 @@ local actions = require "telescope.actions"
 local action_state = require "telescope.actions.state"
 local conf = require("telescope.config").values
 
-local colors = function (opts)
+local tache_picker = function (opts)
     opts = opts or {}
     pickers.new(opts, {
         prompt_title = "colors",
@@ -22,5 +22,3 @@ local colors = function (opts)
         end,
     }):find()
 end
-
-colors()
