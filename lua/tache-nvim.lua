@@ -57,7 +57,7 @@ local function complete_task(task_name)
     f:close()
 end
 
-local tache_picker = function (opts)
+local picker = function (opts)
     opts = opts or {}
     pickers.new(opts, {
         prompt_title = "Tache",
@@ -99,10 +99,11 @@ local function setup()
     end, {})
 
     vim.api.nvim_create_user_command('TachePicker', function (opts)
-        tache_picker()
+        picker()
     end, {})
 end
 
+M.picker = picker
 M.setup = setup
 
 return M
